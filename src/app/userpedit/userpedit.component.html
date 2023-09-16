@@ -1,0 +1,18 @@
+<h1 class="bg-primary text-center">User-Police-Edit</h1>
+
+<div class="jumbotron">
+
+    <form action="" [formGroup]="proForm" (ngSubmit)="submitted()">
+        <label for="">Title</label>
+        <input type="text"  class="form-control" formControlName="title"  placeholder="Enter Product Name">
+        <label for="">Complaint</label>
+        <input type="text"  class="form-control" formControlName="complaint"  placeholder="Enter Product Name">
+        <label for="">Image</label>
+        Previous: <img src="{{pro.image}}" height="300px" width="300px" alt="">
+        <input type="file" (change)="uploadImage($event)" name="" class="form-control" id="">
+        <div class="class text-center">
+            <button class="btn btn-success">Update</button>
+        </div>
+    </form>
+
+</div>

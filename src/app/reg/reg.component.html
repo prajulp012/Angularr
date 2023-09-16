@@ -1,0 +1,35 @@
+<h1 class="text-center bg-info">User Registration</h1>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <form action="" [formGroup]="regForm" (ngSubmit)="submitted()">
+            <label for="">Email</label>
+            <input type="text" formControlName="email" placeholder="Enter Email ID" class="form-control">
+            <div class="alert alert-danger" *ngIf="regForm.get('email')?.invalid && regForm.get('email')?.touched">
+                Enter Valid Email
+            </div>
+            <label for="">Username</label>
+            <input type="text" formControlName="username" placeholder="Enter Username" class="form-control">
+            <div class="alert alert-danger" *ngIf="regForm.get('username')?.invalid && regForm.get('username')?.touched">
+                Enter Valid Username
+            </div>
+            <label for="">Password</label>
+            <input type="password" formControlName="password" name="" placeholder="Enter Your Password" id="" class="form-control">
+            <div class="alert alert-danger" *ngIf="regForm.get('password')?.invalid && regForm.get('password')?.touched">
+                Enter Valid Password
+            </div>
+            <label for="">Confirm Password</label>
+            <input type="password" formControlName="cpassword" name="" placeholder="Re-enter Password" id="" class="form-control">
+            <div class="alert alert-danger" *ngIf="regForm.get('cpassword')?.invalid && regForm.get('cpassword')?.touched">
+                Re-Enter Valid Password
+            </div>
+            <div class="text-center">
+                <button class="btn btn-success">Sign Up</button><br>
+                Already a User?<a routerLink="">Sign In</a>
+            </div>
+        </form>
+    </div>
+    <div class="col"></div>
+</div>
+

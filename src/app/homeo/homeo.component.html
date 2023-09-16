@@ -1,0 +1,28 @@
+<h1 class="bg-success text-center font-italic">User-Official-Complaints</h1>
+
+<a routerLink="/userofficialcomplaintadd" class="btn btn-primary">Add</a>
+
+
+
+<div class="row">
+    <div class="card mb-3" style="width: 18rem;" *ngFor="let i of data">
+        <img class="card-img-top" src="{{i.image}}" height="200px" name="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+          <p class="card-text"></p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{i.title}}</li>
+          <li class="list-group-item">{{i.complaint}}</li>
+          <li class="list-group-item">{{i.user}}</li>
+          <li class="list-group-item">{{i.question_answers | json}}</li>  
+        </ul>
+
+        <div class="card-body">
+
+          <button id="{{i.id}}" (click)="deletePro($event)" class="btn btn-danger">Delete</button>
+          <button id="{{i.id}}" (click)="editPage($event)" class="btn btn-warning">Edit</button>
+        </div>
+        
+      </div>
+</div>

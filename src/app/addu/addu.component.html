@@ -1,0 +1,37 @@
+<h1 class="bg-info text-center">Add Complaint</h1>
+
+<div class="jumbotron">
+
+    <form action="" [formGroup]="proFormm" (ngSubmit)="submitted()">
+        <label for="">Title</label>
+        <input type="text" class="form-control" formControlName="title" placeholder="Enter Product Name">
+        <!-- <div class="alert alert-danger" *ngIf="proForm.get('name')?.invalid && proForm.get('name')?.touched">
+            Invalid Name
+        </div> -->
+        <label for="">Complaint</label>
+        <input type="text" class="form-control" formControlName="complaint" placeholder="Enter Product Name">
+        <!-- <div class="alert alert-danger" *ngIf="proForm.get('name')?.invalid && proForm.get('name')?.touched">
+            Invalid Name
+        </div> -->
+        <!-- <label for="">Price</label>
+        <input type="number" name="" id="" class="form-control" formControlName="price" placeholder="Enter Price">
+        <div class="alert alert-danger" *ngIf="proForm.get('price')?.invalid && proForm.get('price')?.touched">
+            Invalid Price
+        </div>
+        <label for="">Description</label>
+        <textarea name="" class="form-control"  formControlName="description" id="" cols="30" rows="10" placeholder="Enter Description"></textarea>
+        <div class="alert alert-danger" *ngIf="proForm.get('description')?.invalid && proForm.get('description')?.touched">
+            Invalid Category
+        </div> -->
+        <label for="">Image</label>
+        <input type="file" (change)="uploadImage($event)" required name="" class="form-control" id="">
+        <div class="class text-center">
+            <button class="btn btn-success"  >Add</button>
+        </div>
+    </form>
+
+</div>
+
+<!-- (change)="uploadImage($event)" -->
+
+<!-- [disabled]="proForm.invalid" -->
